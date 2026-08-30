@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🌅 ခလေးလေးအတွက် Good Morning 🤍</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html,body{
+    margin:0;
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    font-family:
+    "Myanmar Text",
+    "Noto Sans Myanmar",
+    Arial,
+    sans-serif;
+
+    color:white;
+
+    background:
+    radial-gradient(
+        circle at 50% 0%,
+        #f2a7b9 0%,
+        #9b79b7 35%,
+        #4a477e 68%,
+        #111326 100%
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+/* ================= SUN ================= */
+
+.sun{
+    position:fixed;
+    top:48px;
+    right:9%;
+
+    width:75px;
+    height:75px;
+
+    background:#fff4b8;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 20px #fff4b8,
+    0 0 50px rgba(255,220,160,.65),
+    0 0 90px rgba(255,190,210,.3);
+
+    z-index:1;
+}
+
+/* ================= STARS ================= */
+
+.star{
+    position:fixed;
+    color:white;
+    z-index:1;
+
+    animation:
+    twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.2;
+        transform:scale(.6);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.25);
+    }
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+
+    width:94%;
+    max-width:540px;
+
+    padding:
+    95px
+    8px
+    55px;
+
+    text-align:center;
+
+    position:relative;
+    z-index:5;
+}
+
+/* ================= PAGE ================= */
+
+.page{
+    width:100%;
+
+    animation:
+    pageIn .65s ease;
+}
+
+.hidden{
+    display:none !important;
+}
+
+@keyframes pageIn{
+
+    from{
+        opacity:0;
+
+        transform:
+        translateY(20px)
+        scale(.97);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+    }
+}
+
+/* ================= ICON ================= */
+
+.icon{
+
+    font-size:50px;
+
+    margin-bottom:8px;
+
+    animation:
+    iconFloat 2.5s infinite;
+
+    filter:
+    drop-shadow(
+        0 0 12px
+        rgba(255,220,245,.8)
+    );
+}
+
+@keyframes iconFloat{
+
+    0%,100%{
+        transform:
+        translateY(0);
+    }
+
+    50%{
+        transform:
+        translateY(-8px)
+        scale(1.06);
+    }
+}
+
+/* ================= TITLE ================= */
+
+h1{
+
+    font-size:
+    clamp(28px,8vw,40px);
+
+    line-height:1.4;
+
+    margin:
+    8px 0 22px;
+
+    color:#fffaff;
+
+    text-shadow:
+
+    0 0 10px #ffdff0,
+
+    0 0 25px #c9b7ff,
+
+    0 0 45px #7772d8;
+}
+
+h2{
+
+    font-size:
+    clamp(23px,7vw,31px);
+
+    line-height:1.5;
+
+    margin:
+    8px 0 22px;
+
+    color:#fffaff;
+
+    text-shadow:
+
+    0 0 10px #ffe0ef,
+
+    0 0 25px #bcaeff;
+}
+
+/* ================= NAME ================= */
+
+.name{
+
+    font-family:
+    "Segoe Script",
+    "Brush Script MT",
+    cursive;
+
+    font-size:
+    clamp(36px,11vw,58px);
+
+    font-weight:bold;
+
+    color:#fff4fb;
+
+    letter-spacing:2px;
+
+    text-shadow:
+
+    0 0 8px #ffd8ee,
+
+    0 0 20px #e6b7ff,
+
+    0 0 40px #a990ff;
+
+    margin-bottom:12px;
+}
+
+/* ================= MESSAGE ================= */
+
+.message,
+.poem{
+
+    font-family:
+    "Myanmar Text",
+    "Noto Sans Myanmar",
+    Arial,
+    sans-serif;
+
+    font-size:20px;
+
+    line-height:2.15;
+
+    color:#fffaff;
+
+    text-shadow:
+
+    0 0 5px
+    rgba(220,210,255,.9),
+
+    0 0 10px
+    rgba(190,180,255,.35);
+
+    background:
+    rgba(20,17,55,.48);
+
+    border-radius:22px;
+
+    padding:
+    23px
+    17px;
+
+    backdrop-filter:
+    blur(6px);
+
+    white-space:normal;
+
+    overflow-wrap:
+    break-word;
+
+    word-break:
+    normal;
+
+    width:100%;
+}
+
+/* ================= POEM ================= */
+
+.poem span{
+
+    display:block;
+
+    margin:
+    9px 0;
+}
+
+/* ================= HIGHLIGHT ================= */
+
+.highlight{
+
+    color:#ffe3f1;
+
+    font-weight:bold;
+
+    text-shadow:
+
+    0 0 6px
+    rgba(255,220,240,.9),
+
+    0 0 12px
+    rgba(220,190,255,.5);
+}
+
+/* ================= BUTTON ================= */
+
+button{
+
+    margin-top:22px;
+
+    padding:
+    13px
+    28px;
+
+    border:0;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #8177dc,
+        #c184c9,
+        #927de0
+    );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    box-shadow:
+
+    0 0 18px
+    rgba(160,140,240,.7),
+
+    0 0 35px
+    rgba(220,150,220,.3);
+
+    cursor:pointer;
+}
+
+button:active{
+
+    transform:
+    scale(.94);
+}
+
+/* ================= FLOATING ================= */
+
+.floating{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    pointer-events:none;
+
+    color:white;
+
+    font-weight:bold;
+
+    z-index:2;
+
+    animation:
+    rise linear forwards;
+
+    text-shadow:
+
+    0 0 6px white,
+
+    0 0 15px
+    rgba(190,190,255,.9),
+
+    0 0 25px
+    rgba(220,190,255,.6);
+}
+
+@keyframes rise{
+
+    0%{
+
+        transform:
+        translateY(0)
+        translateX(0)
+        scale(.3)
+        rotate(0deg);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    50%{
+
+        transform:
+        translateY(-50vh)
+        translateX(25px)
+        scale(1)
+        rotate(160deg);
+    }
+
+    100%{
+
+        transform:
+        translateY(-110vh)
+        translateX(-25px)
+        scale(.2)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+/* ================= PHONE ================= */
+
+@media(max-width:600px){
+
+    .container{
+
+        width:95%;
+
+        padding:
+        90px
+        5px
+        50px;
+    }
+
+    .message,
+    .poem{
+
+        font-size:19px;
+
+        line-height:2.05;
+
+        padding:
+        21px
+        14px;
+    }
+}
+
+/* ================= SMALL PHONE ================= */
+
+@media(max-width:380px){
+
+    .container{
+
+        width:96%;
+
+        padding:
+        80px
+        4px
+        45px;
+    }
+
+    .sun{
+
+        width:60px;
+        height:60px;
+
+        top:45px;
+    }
+
+    .icon{
+        font-size:42px;
+    }
+
+    .name{
+        font-size:40px;
+    }
+
+    h1{
+
+        font-size:28px;
+        line-height:1.4;
+    }
+
+    h2{
+
+        font-size:23px;
+        line-height:1.5;
+    }
+
+    .message,
+    .poem{
+
+        font-size:18px;
+
+        line-height:1.95;
+
+        padding:
+        19px
+        12px;
+    }
+
+    button{
+
+        font-size:15px;
+
+        padding:
+        11px
+        23px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SUN -->
+
+<div class="sun"></div>
+
+<!-- STARS -->
+
+<div class="star" style="top:12%;left:12%;">✦</div>
+<div class="star" style="top:22%;left:28%;">✧</div>
+<div class="star" style="top:17%;left:68%;">⋆</div>
+<div class="star" style="top:35%;left:88%;">✦</div>
+<div class="star" style="top:60%;left:8%;">✧</div>
+<div class="star" style="top:72%;left:91%;">⋆</div>
+<div class="star" style="top:44%;left:78%;">✦</div>
+
+<div class="container">
+
+<!-- ================================================= -->
+<!-- PAGE 1 -->
+<!-- ================================================= -->
+
+<div id="page1" class="page">
+
+<div class="icon">
+🌅🥺🤍
+</div>
+
+<div class="name">
+My Baby
+</div>
+
+<h1>
+မောနင်းပါ ခလေးလေးရေ… 🤍
+</h1>
+
+<div class="message">
+
+မနေ့ညက
+ခလေးလေးကို စောင့်ပါဦးဆိုပြီး
+ပြောထားခဲ့တာလေးအတွက်
+ကိုယ်တကယ်တောင်းပန်ပါတယ်နော်… 🥺🤍
+
+<br><br>
+
+ကိုယ်က ခလေးလေးကို
+စောင့်ခိုင်းပြီး
+တမင်အိပ်သွားတာ မဟုတ်ပါဘူးနော်။
+
+<br><br>
+
+မနေ့ညက
+ဖုန်းဘေကုန်သွားလို့
+လိုင်းမတက်တော့တာပါ။ 📱🥺
+
+<br><br>
+
+ခလေးလေးက
+ကိုယ့်ကို စောင့်နေမလား၊
+စာပြန်လာမလားဆိုပြီး
+ကိုယ်လည်း စိတ်ထဲမှာ
+တွေးနေခဲ့ပါတယ်။ 🤍
+
+<br><br>
+
+<span class="highlight">
+
+ခလေးလေးကို
+တမင်ပစ်ထားတာလည်း မဟုတ်ဘူး၊
+စိတ်မဝင်စားလို့လည်း မဟုတ်ဘူးနော်။
+
+ဘေကုန်သွားလို့
+လိုင်းမတက်နိုင်ခဲ့တာပါ… 🥺🤍
+
+</span>
+
+<br><br>
+
+စိတ်မဆိုးပါနဲ့နော်
+ကိုယ့်ခလေးလေးရေ… 🫂🌷
+
+</div>
+
+<button onclick="nextPage(2)">
+🥺 တောင်းပန်ပါတယ်နော်
+</button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- PAGE 2 -->
+<!-- ================================================= -->
+
+<div id="page2" class="page hidden">
+
+<div class="icon">
+🫂🥺💗
+</div>
+
+<h2>
+ခလေးလေး စိတ်မဆိုးနဲ့နော်… 🤍
+</h2>
+
+<div class="message">
+
+ကိုယ်သိပါတယ်…
+မနေ့ညက ကိုယ့်စာကို
+စောင့်နေခဲ့ရင်
+ကိုယ်မပေါ်လာတာကြောင့်
+စိတ်မကောင်းဖြစ်နိုင်တယ်။ 🥺
+
+<br><br>
+
+ဒါကြောင့်
+ဒီမနက်နိုးလာတာနဲ့
+အရင်ဆုံးပြောချင်တာက—
+
+<br><br>
+
+<span class="highlight">
+တောင်းပန်ပါတယ် ခလေးလေးရေ… 🥺🤍
+</span>
+
+<br><br>
+
+ကိုယ်တမင်လုပ်တာ
+လုံးဝမဟုတ်ပါဘူးနော်။
+
+<br><br>
+
+ဖုန်းဘေကုန်သွားပြီး
+လိုင်းမတက်တော့တာကြောင့်
+ခလေးလေးဆီ
+စာမပို့နိုင်ခဲ့တာပါ။ 📱🤍
+
+<br><br>
+
+ကိုယ့်ကို နားလည်ပေးပါနော်။
+စိတ်ဆိုးနေရင်လည်း
+အကြာကြီးမဆိုးနဲ့နော်… 🥺
+
+<br><br>
+
+ကိုယ်က
+ခလေးလေး စိတ်ဆိုးနေတာထက်
+ပြုံးနေတာကိုပဲ
+မြင်ချင်တာပါ။ 🌷🤍
+
+<br><br>
+
+<b>
+ချစ်တယ်နော်… 🫂❤️
+</b>
+
+</div>
+
+<button onclick="nextPage(3)">
+💗 ကိုယ်အရမ်းလွမ်းတယ်
+</button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- PAGE 3 -->
+<!-- ================================================= -->
+
+<div id="page3" class="page hidden">
+
+<div class="icon">
+🥺💗🌙
+</div>
+
+<h2>
+ကိုယ် ခလေးလေးကို အရမ်းလွမ်းတယ်… 🤍
+</h2>
+
+<div class="message">
+
+မနေ့ညက
+လိုင်းမတက်တော့တဲ့အချိန်မှာ
+ကိုယ့်စိတ်ထဲမှာ
+ခလေးလေးကိုပဲ သတိရနေခဲ့တာ။ 🥺
+
+<br><br>
+
+စာမပို့နိုင်တာက
+ကိုယ့်အတွက်လည်း
+တကယ်စိတ်မကောင်းစရာပါ။
+
+<br><br>
+
+ဖုန်းကိုဖွင့်ကြည့်တိုင်း
+ခလေးလေးဆီ
+စာပို့ချင်တယ်…
+
+<br>
+
+ခလေးလေးရဲ့
+စာလေးတစ်ကြောင်း
+ရချင်တယ်…
+
+<br><br>
+
+<span class="highlight">
+
+တစ်ခဏလေးတောင်
+မတွေ့ရ၊ မပြောရရင်
+ကိုယ်က ခလေးလေးကို
+ပိုပိုပြီး လွမ်းလာတယ်။ 🥺❤️
+
+</span>
+
+<br><br>
+
+အဝေးမှာရှိနေရင်တောင်
+ကိုယ့်စိတ်ထဲမှာတော့
+ခလေးလေးက
+အမြဲအနီးဆုံးမှာပါ။ 🤍
+
+<br><br>
+
+ဒီမနက်နိုးလာတဲ့အချိန်မှာလည်း
+ပထမဆုံးသတိရမိတာ
+ခလေးလေးပါပဲ။ 🌅
+
+</div>
+
+<button onclick="nextPage(4)">
+🌷 ခလေးလေးအတွက် ကဗျာ
+</button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- PAGE 4 -->
+<!-- ================================================= -->
+
+<div id="page4" class="page hidden">
+
+<div class="icon">
+🌷💗🥺
+</div>
+
+<h2>
+ခလေးလေးအတွက် ကဗျာလေး… 🤍
+</h2>
+
+<div class="poem">
+
+<span>
+မနေ့ညက လိုင်းမတက်
+</span>
+
+<span>
+စာလေးတစ်ကြောင်း မပို့နိုင်ခဲ့
+</span>
+
+<span>
+တမင်ပစ်ထားတာ မဟုတ်ပါဘူး
+</span>
+
+<span>
+ဘေကုန်သွားလို့ပါ ခလေးရယ်… 🥺
+</span>
+
+<span>
+ကိုယ့်စိတ်ထဲမှာတော့
+</span>
+
+<span>
+ခလေးလေးကို သတိရနေတယ်
+</span>
+
+<span>
+ဖုန်းလေးကိုင်ပြီး
+</span>
+
+<span>
+စာပို့ချင်နေတယ်… 📱🤍
+</span>
+
+<span>
+မမြင်ရတဲ့ညတွေမှာ
+</span>
+
+<span>
+လွမ်းခြင်းတွေက ပိုများလာတယ်
+</span>
+
+<span>
+မပြောရတဲ့အချိန်တိုင်း
+</span>
+
+<span>
+ကိုယ့်နှလုံးသားက ခလေးကိုရှာတယ်။ 💗
+</span>
+
+<span>
+မနက်ခင်းနေရောင်လေးလို
+</span>
+
+<span>
+ခလေးရဲ့အပြုံးက
+</span>
+
+<span>
+ကိုယ့်နေ့ရက်တွေကို လင်းစေတယ်။ 🌅
+</span>
+
+<span class="highlight">
+
+အဝေးမှာရှိနေလည်း
+ကိုယ့်အချစ်က အနီးဆုံးပါ။
+
+မတွေ့ရတဲ့နေ့တွေမှာ
+ပိုလွမ်းတယ်…
+
+မပြောရတဲ့ညတွေမှာ
+ပိုသတိရတယ်…
+
+ခလေးလေးရေ
+ကိုယ်အရမ်းချစ်တယ်။ 🥺❤️
+
+</span>
+
+</div>
+
+<button onclick="nextPage(5)">
+🌙 အိပ်ပျော်တဲ့ညအတွက်
+</button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- PAGE 5 -->
+<!-- ================================================= -->
+
+<div id="page5" class="page hidden">
+
+<div class="icon">
+🌙🧸💤
+</div>
+
+<h2>
+ခလေးလေး အိပ်ပျော်တဲ့အချိန်… 🤍
+</h2>
+
+<div class="message">
+
+ဒီည
+ခလေးလေး အိပ်ရာဝင်တဲ့အခါ
+စိတ်လေးအေးအေးနဲ့
+အိပ်ပျော်နိုင်ပါစေ။ 🌙🤍
+
+<br><br>
+
+ဒီနေ့တစ်နေ့လုံး
+ပင်ပန်းခဲ့သမျှတွေ
+အိပ်မက်ထဲမှာတောင်
+မလိုက်လာပါစေနဲ့နော်။
+
+<br><br>
+
+ခေါင်းအုံးလေးပေါ်
+ခေါင်းချလိုက်တာနဲ့
+စိတ်ပူစရာတွေ
+အားလုံးမေ့သွားပြီး
+ကောင်းကောင်းအနားယူနိုင်ပါစေ။ 🧸💤
+
+<br><br>
+
+<span class="highlight">
+
+ခလေးလေးရဲ့
+အိပ်မက်ထဲမှာလည်း
+ပျော်ရွှင်စရာလေးတွေပဲ
+တွေ့ပါစေ။
+
+နိုးလာတဲ့အခါ
+အပြုံးလေးနဲ့
+နိုးလာနိုင်ပါစေ။ 🌷🤍
+
+</span>
+
+<br><br>
+
+ကိုယ်က ဒီဘက်ကနေ
+ခလေးလေး
+ကျန်းမာပြီး
+စိတ်ချမ်းသာဖို့
+ဆုတောင်းပေးနေမယ်နော်။ 🙏❤️
+
+</div>
+
+<button onclick="nextPage(6)">
+🙏 ဆုတောင်းစကား
+</button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- PAGE 6 -->
+<!-- ================================================= -->
+
+<div id="page6" class="page hidden">
+
+<div class="icon">
+🙏🌙🤍
+</div>
+
+<h2>
+ခလေးလေးအတွက် ဆုတောင်းစကား… 🌷
+</h2>
+
+<div class="message">
+
+ဒီနေ့ကစပြီး
+ခလေးလေးရဲ့ နေ့ရက်တိုင်း
+အေးချမ်းပါစေ။ 🙏🤍
+
+<br><br>
+
+စိတ်ညစ်စရာတွေ
+နည်းပါးပါစေ။
+
+<br>
+
+ပင်ပန်းစရာတွေ
+လျော့ပါစေ။
+
+<br>
+
+ဝမ်းနည်းစရာတွေ
+ဝေးပါစေ။
+
+<br><br>
+
+<span class="highlight">
+
+ကျန်းမာခြင်း၊
+ပျော်ရွှင်ခြင်း၊
+အေးချမ်းခြင်းတွေနဲ့
+နေ့တိုင်းပြည့်နေပါစေ။ 🌷✨
+
+</span>
+
+<br><br>
+
+ခလေးလေးသွားတဲ့လမ်းတိုင်း
+အန္တရာယ်ကင်းပါစေ။
+
+<br><br>
+
+လုပ်သမျှအလုပ်တိုင်း
+အဆင်ပြေပါစေ။
+
+<br><br>
+
+စားသမျှအစားအစာတိုင်း
+အရသာရှိပါစေ။
+
+<br>
+
+အိပ်တဲ့ညတိုင်း
+အိပ်ရေးဝဝနဲ့
+အိပ်ပျော်နိုင်ပါစေ။ 🌙💤
+
+<br><br>
+
+ပြီးတော့…
+
+<br><br>
+
+<b>
+ခလေးလေးရဲ့အပြုံးလေး
+ဘယ်တော့မှ မပျောက်ပါစေနဲ့။ 🤍
+</b>
+
+</div>
+
+<button onclick="nextPage(7)">
+💌 ခလေးလေးအတွက် နောက်ဆုံးစာ
+</button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- PAGE 7 -->
+<!-- ================================================= -->
+
+<div id="page7" class="page hidden">
+
+<div class="icon">
+💌🥺❤️
+</div>
+
+<h2>
+ကိုယ်ပြောချင်တဲ့ နောက်ဆုံးစကား… 🤍
+</h2>
+
+<div class="message">
+
+ခလေးလေးရေ…
+
+<br><br>
+
+မနေ့ညက
+စာမပို့နိုင်ခဲ့တာလေးကို
+နားလည်ပေးပါနော်။ 🥺
+
+<br><br>
+
+ကိုယ်က
+ခလေးလေးကို စောင့်ခိုင်းပြီး
+တမင်ပျောက်သွားတာ
+လုံးဝမဟုတ်ပါဘူး။
+
+<br><br>
+
+ဘေကုန်သွားလို့
+လိုင်းမတက်တော့တာပါ။ 📱🤍
+
+<br><br>
+
+<span class="highlight">
+
+ဒါပေမယ့်
+လိုင်းမတက်နိုင်ခဲ့တဲ့အချိန်မှာတောင်
+ကိုယ့်စိတ်ထဲမှာတော့
+ခလေးလေးကို
+မမေ့ခဲ့ဘူးနော်။ 🥺❤️
+
+</span>
+
+<br><br>
+
+ကိုယ်က
+ခလေးလေးကို
+အရမ်းလွမ်းတယ်။
+
+<br><br>
+
+စာမပြောရရင်
+တစ်ခုခုလိုနေသလိုပဲ…
+
+<br>
+
+အသံမကြားရရင်
+တစ်နေ့လုံး မပြည့်စုံသလိုပဲ…
+
+<br><br>
+
+ခလေးလေးက
+ကိုယ့်အတွက်
+တကယ်အရေးကြီးတဲ့သူပါ။ 🤍
+
+</div>
+
+<button onclick="nextPage(8)">
+🌅 Good Morning ခလေးလေး
+</button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- PAGE 8 -->
+<!-- ================================================= -->
+
+<div id="page8" class="page hidden">
+
+<div class="icon">
+🌅🥺💗
+</div>
+
+<div class="name">
+My Baby
+</div>
+
+<h1>
+Good Morning ပါ ခလေးလေးရေ… 🤍
+</h1>
+
+<div class="message">
+
+မနက်ခင်းလေးရောက်လာပြီနော်… 🌅🤍
+
+<br><br>
+
+ဒီမနက်နိုးလာတာနဲ့
+ကိုယ်အရင်ဆုံးသတိရမိတာ
+ခလေးလေးပါပဲ။ 🥺
+
+<br><br>
+
+မနေ့ညက
+စာမပို့နိုင်ခဲ့တာအတွက်
+တစ်ခါထပ်ပြီး
+တောင်းပန်ပါတယ်နော်။
+
+<br><br>
+
+<span class="highlight">
+
+ကိုယ်အိပ်သွားတာ မဟုတ်ပါဘူး။
+
+ဖုန်းဘေကုန်သွားလို့
+လိုင်းမတက်တော့တာပါနော်။ 📱🥺🤍
+
+</span>
+
+<br><br>
+
+ခလေးလေး
+စိတ်မဆိုးနဲ့နော်…
+
+<br>
+
+စိတ်ဆိုးနေရင်လည်း
+ဒီမနက်မှာ
+အပြုံးလေးတစ်ပွင့်
+ပြန်ပေးပါနော်။ 🌷
+
+<br><br>
+
+ဒီနေ့အလုပ်သွားရင်
+လမ်းမှာဂရုစိုက်နော်။
+
+<br>
+
+အလုပ်လုပ်ရင်လည်း
+ကိုယ့်ကိုယ်ကို ဂရုစိုက်။
+
+<br>
+
+ရေသောက်၊
+အစားအစာလည်း
+အချိန်မှန်စားနော်။ 🤍
+
+<br><br>
+
+ညကျရင်လည်း
+အရမ်းမနောက်ကျဘဲ
+စောစောအိပ်ပါ။ 🧸💤
+
+<br><br>
+
+<span class="highlight">
+
+ကိုယ်ကတော့
+ဒီနေ့တစ်နေ့လုံး
+ခလေးလေးအဆင်ပြေပါစေ၊
+ပျော်ရွှင်ပါစေ၊
+ကျန်းမာပါစေဆိုပြီး
+ဆုတောင်းနေမယ်။ 🙏🤍
+
+</span>
+
+<br><br>
+
+ပြီးတော့…
+
+<br><br>
+
+<b>
+
+ခလေးလေးကို
+ကိုယ်အရမ်းလွမ်းတယ်… 🥺❤️
+
+<br><br>
+
+အရမ်းလည်းချစ်တယ်။
+
+<br><br>
+
+မနက်ခင်းလေးက
+လှပနေသလို
+ခလေးလေးရဲ့နေ့လေးလည်း
+လှပပါစေနော်။ 🌅🌷🤍
+
+<br><br>
+
+Good Morning ပါ
+ကိုယ့်ခလေးလေးရေ… 💗
+
+</b>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* ================= FLOATING ================= */
+
+function createFloating(){
+
+    const item =
+        document.createElement("div");
+
+    item.className =
+        "floating";
+
+    const symbols = [
+
+        "✦",
+        "✧",
+        "⋆",
+        "˚",
+        "⊹",
+        "₊˚",
+        "❋",
+        "✿",
+        "𖤓",
+        "☀",
+        "♡",
+        "🤍",
+        "🌷"
+
+    ];
+
+    item.innerHTML =
+        symbols[
+            Math.floor(
+                Math.random() *
+                symbols.length
+            )
+        ];
+
+    item.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+    item.style.fontSize =
+        (
+            10 +
+            Math.random() *
+            20
+        ) +
+        "px";
+
+    item.style.animationDuration =
+        (
+            7 +
+            Math.random() *
+            8
+        ) +
+        "s";
+
+    item.style.opacity =
+        .35 +
+        Math.random() *
+        .6;
+
+    document.body.appendChild(item);
+
+    setTimeout(
+        ()=>{
+            item.remove();
+        },
+        15000
+    );
+
+}
+
+setInterval(
+    createFloating,
+    650
+);
+
+
+/* ================= PAGE NAVIGATION ================= */
+
+function nextPage(pageNumber){
+
+    document
+    .querySelectorAll(".page")
+    .forEach(
+        page=>{
+            page.classList.add(
+                "hidden"
+            );
+        }
+    );
+
+    const next =
+        document.getElementById(
+            "page" +
+            pageNumber
+        );
+
+    if(next){
+
+        next.classList.remove(
+            "hidden"
+        );
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }
+
+}
+
+</script>
+
+</body>
+  </html>
